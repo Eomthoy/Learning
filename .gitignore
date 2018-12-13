@@ -3,3 +3,14 @@
 ################################################################################
 
 /.vs
+/ClassLibraryDemo/bin/Debug/netcoreapp2.0
+/ClassLibraryDemo/obj
+/Common/bin/Debug/netcoreapp2.0
+/Common/obj
+/Distribution/bin/Debug
+/Distribution/obj/Debug
+/Learning/bin/Debug/netcoreapp2.0
+/Learning/obj
+/NetCoreApp/bin/Debug/netcoreapp2.0
+/NetCoreApp/obj
+/packages/Newtonsoft.Json.11.0.2
