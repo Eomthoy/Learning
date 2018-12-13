@@ -11,7 +11,7 @@ using System.IO;
 using NPOI.HSSF.UserModel;
 using NPOI.XSSF.UserModel;
 
-namespace Common
+namespace Common.Helper
 {
     /// <summary>
     /// 通用数据访问类

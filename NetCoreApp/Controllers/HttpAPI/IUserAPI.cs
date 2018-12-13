@@ -1,4 +1,4 @@
-﻿using cdutcm.Common.Core;
+﻿using Common.Basics;
 using NetCoreApp.Models;
 using System;
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ namespace NetCoreApp.Controllers
     /// <summary>
     /// 用户操作接口
     /// </summary>
-    public interface IOnlineStudyAPI : IHttpApi
+    public interface IUserAPI : IHttpApi
     {
         // GET {url}?account={account}&password={password}&something={something}
         [HttpPost("Data/GetStatistics")]

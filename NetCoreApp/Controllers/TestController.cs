@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Common.Basics;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -56,10 +57,16 @@ namespace NetCoreApp.Controllers
                         stream.Flush();
                     }
                     //读取excel数据保存至数据库
-                    var result = Common.SqlHelper.ReadExcelToDataTable(filePath, "学生酬金领取表", 2);
+                    var result = ReadExcelToDataTable(filePath, "学生酬金领取表", 2);
                 }
             }
         }
+
+        private object ReadExcelToDataTable(string filePath, string v1, int v2)
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -90,11 +97,7 @@ namespace NetCoreApp.Controllers
                     int offset2 = pageSize2 * (pageNum2 - 1);
                     IList<Student> list2 = context.Student.Skip(offset2).Take(pageSize2).ToList();
                     //分页3
-                    PageResult<Student> result = new PageResult<Student>();
-                    result.Total = context.Student.Count();
-                    result.PageSize = pageSize2;
-                    result.PageNum = pageNum2;
-                    result.Rows = list2;
+                    PageResult<Student> result = new PageResult<Student>(pageNum2, pageSize, context.Student);
                     //sql执行
                     string sqlsql = "Select * From Student";
                     var dasjdla = context.Student.FromSql(sqlsql).ToList();
@@ -132,14 +135,5 @@ namespace NetCoreApp.Controllers
         /// 
         /// </summary>
         public int? Price { get; set; }
-    }
-
-    public class PageResult<T> where T : class, IAggrateRoot
-    {
-        public PageResult() { }
-        public int Total { get; set; }
-        public int PageSize { get; set; }
-        public int PageNum { get; set; }
-        public IList<T> Rows { get; set; }
     }
 }

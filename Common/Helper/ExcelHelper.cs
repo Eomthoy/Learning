@@ -10,7 +10,7 @@ using System.Data;
 using NPOI.SS.Util;
 using NPOI.SS.UserModel;
 
-namespace Common
+namespace Common.Helper
 {
     /// <summary>
     /// 通用数据访问类
