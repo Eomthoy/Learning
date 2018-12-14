@@ -12,7 +12,7 @@ namespace NetCoreApp.Controllers
     /// </summary>
     [Produces("application/json")]
     [Route("api/Async")]
-    public class AsyncController : Controller
+    public class AsyncController : ApiBaseController
     {
         /// <summary>
         /// 

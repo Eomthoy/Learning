@@ -1,25 +1,11 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 
 namespace Common.Basics
 {
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <typeparam name="T"></typeparam>
-    public class AjaxResult<T> where T : class
+    public class AjaxResult<T>
     {
-        /// <summary>
-        /// 是否成功
-        /// </summary>
         public bool? IsSuccess { get; set; }
-        /// <summary>
-        /// 返回消息
-        /// </summary>
         public string Message { get; set; }
-        /// <summary>
-        /// 返回数据
-        /// </summary>
         public IEnumerable<T> Data { get; set; }
         public AjaxResult()
         {
@@ -45,51 +31,35 @@ namespace Common.Basics
             this.Message = message;
             this.Data = data;
         }
-        public static AjaxResult<T> Success(string message)
-        {
-            return new AjaxResult<T>(true, message);
-        }
-        public static AjaxResult<T> Erro(string message)
-        {
-            return new AjaxResult<T>(false, message);
-        }
     }
-    public class Success
+    public class AjaxResult
     {
-        /// <summary>
-        /// 是否成功
-        /// </summary>
         public bool? IsSuccess { get; set; }
-        /// <summary>
-        /// 返回消息
-        /// </summary>
         public string Message { get; set; }
-        public Success()
+        public object Data { get; set; }
+        public AjaxResult()
         {
         }
-        public Success(string message)
+        public AjaxResult(object data)
         {
             this.IsSuccess = true;
+            this.Data = data;
+        }
+        public AjaxResult(bool isSuccess, string message)
+        {
+            this.IsSuccess = isSuccess;
             this.Message = message;
         }
-    }
-    public class Erro
-    {
-        /// <summary>
-        /// 是否成功
-        /// </summary>
-        public bool? IsSuccess { get; set; }
-        /// <summary>
-        /// 返回消息
-        /// </summary>
-        public string Message { get; set; }
-        public Erro()
+        public AjaxResult(bool isSuccess, object data)
         {
+            this.IsSuccess = isSuccess;
+            this.Data = data;
         }
-        public Erro(string message)
+        public AjaxResult(bool isSuccess, string message, object data)
         {
-            this.IsSuccess = false;
+            this.IsSuccess = isSuccess;
             this.Message = message;
+            this.Data = data;
         }
     }
 }

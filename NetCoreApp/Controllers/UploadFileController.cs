@@ -9,7 +9,7 @@ namespace NetCoreApp.Controllers
 {
     [Produces("application/json")]
     [Route("FileManage/")]
-    public class FileManageController : Controller
+    public class FileManageController : ApiBaseController
     {
         private IHostingEnvironment _hostingEnvironment;
         private string path = string.Empty;
@@ -28,13 +28,12 @@ namespace NetCoreApp.Controllers
         /// <returns></returns>
         [Route("UploadFile")]
         [HttpPost]
-        public async Task<AjaxResult<string>> UploadFile()
+        public async Task<AjaxResult> UploadFile()
         {
-
             FileHelper.Upload(path, Request.Form.Files);
             await FileHelper.UploadAsync(path, Request.Form.Files);
 
-            return new Success("上传成功");
+            return Succuss("");
         }
         /// <summary>
         /// 

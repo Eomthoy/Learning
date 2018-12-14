@@ -1,4 +1,4 @@
-﻿using cdutcm.Common.Core;
+﻿using Common.Basics;
 using NetCoreApp.Models;
 using System;
 using System.Collections.Generic;

@@ -8,7 +8,7 @@ namespace Common.Basics
     /// 数据分页
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class PageResult<T> where T : class
+    public class PageResult<T>
     {
         /// <summary>
         /// 数据总条数
