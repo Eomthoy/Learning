@@ -31,4 +31,8 @@
     <ProjectReference Include="..\Common\Common.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\HttpApi\" />
+  </ItemGroup>
+
 </Project>
