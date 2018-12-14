@@ -31,10 +31,4 @@
     <ProjectReference Include="..\Common\Common.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="cdutcm.Common">
-      <HintPath>S:\cdutcm.Common\V3.0\cdutcm.Common.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 </Project>

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Common
+namespace Common.Helper
 {
     /// <summary>
     /// Excel导入

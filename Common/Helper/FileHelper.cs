@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Common
+namespace Common.Helper
 {
     /// <summary>
     /// 文件上传、下载

@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System.IO;
 using System.Threading.Tasks;
-using cdutcm.Common.Core;
-using Common;
+using Common.Basics;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using NetCoreApp.Models;
-using NetCoreApp.Repository;
+using Common.Helper;
 
 namespace NetCoreApp.Controllers
 {
@@ -35,13 +28,13 @@ namespace NetCoreApp.Controllers
         /// <returns></returns>
         [Route("UploadFile")]
         [HttpPost]
-        public async Task<AjaxResult> UploadFile()
+        public async Task<AjaxResult<string>> UploadFile()
         {
 
             FileHelper.Upload(path, Request.Form.Files);
             await FileHelper.UploadAsync(path, Request.Form.Files);
 
-            return new AjaxResult("上传成功");
+            return new Success("上传成功");
         }
         /// <summary>
         /// 

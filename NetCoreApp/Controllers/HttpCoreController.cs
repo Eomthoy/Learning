@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using cdutcm.Common.Core;
+using Common.Basics;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NetCoreApp.Models;
@@ -23,6 +23,7 @@ namespace NetCoreApp.Controllers
             {
                 var userApi = HttpApiFactory.Create<IUserAPI>();
                 var about = await userApi.GetByIdAsync(new SearchDto() { Role = "1", Code = "20051053" });
+                new AjaxResult<StatisticsDto>(about.Data);
                 return about;
             }
             catch (Exception ex)
