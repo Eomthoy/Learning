@@ -14,6 +14,7 @@ using System.Text;
 using cdutcm.Json;
 using System.Text.RegularExpressions;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace Learning
 {
@@ -21,72 +22,76 @@ namespace Learning
     {
         static void Main(string[] args)
         {
-            SqlHelper.connString = @"Server=1TVFGO8OATR3Y7G\SQLEXPRESS;DataBase=MyDB;Uid=sa;Pwd=123;";
-
-            ExcelHelper.WirteExcel();
             //PLinq();
 
-            checked
-            {
+            #region ExcelHandle
+            //SqlHelper.connString = @"Server=1TVFGO8OATR3Y7G\SQLEXPRESS;DataBase=MyDB;Uid=sa;Pwd=123;";
+            //ExcelHelper.WirteExcel();
+            #endregion
 
-                //DateTime a = DateTime.Now;
-                //DateTime b = DateTime.UtcNow;
-                //var ab = (a - b).TotalMinutes;
+            #region MyRegion
+            //DateTime a = DateTime.Now;
+            //DateTime b = DateTime.UtcNow;
+            //var ab = (a - b).TotalMinutes;
 
-                //string str = "abcdefgahijklmnop";
-                //Dictionary<string, int> dic = new Dictionary<string, int>();
-                //for (int i = 0, j = 1; j <= str.Length; j++)
-                //{
-                //    string t = str.Substring(i, j);
-                //    char next = str[j];
-                //    if (t.Contains(next))
-                //    {
-                //        dic.Add(t, t.Count());
-                //        i = str.IndexOf(str[j]) + 1;
-                //    }
-                //}
-                //foreach (var item in dic)
-                //{
-                //    Console.WriteLine(item.Key + "\t", item.Value);
-                //}
+            //string str = "abcdefgahijklmnop";
+            //Dictionary<string, int> dic = new Dictionary<string, int>();
+            //for (int i = 0, j = 1; j <= str.Length; j++)
+            //{
+            //    string t = str.Substring(i, j);
+            //    char next = str[j];
+            //    if (t.Contains(next))
+            //    {
+            //        dic.Add(t, t.Count());
+            //        i = str.IndexOf(str[j]) + 1;
+            //    }
+            //}
+            //foreach (var item in dic)
+            //{
+            //    Console.WriteLine(item.Key + "\t", item.Value);
+            //}
+            #endregion
 
-                string input = "10.126.6.113 10.126.6.256";
-                //string pattern = @"([01]?\d?\d|2[0-4]\d|25[0-5]\.){3}([01]?\d?\d|2[0-4]\d|25[0-5])";
-                string pattern = @"(([01]?\d?\d|2[0-4]\d|25[0-5])\.){3}([01]?\d?\d|2[0-4]\d|25[0-5])";
-                bool result = Regex.IsMatch(input, pattern);
-                Match matchas = Regex.Match(input, pattern);
-                foreach (Match item in Regex.Matches(input, pattern))
-                {
-                    string match = item.Value;
-                }
+            #region Reg
+            //string input = "10.126.6.113 10.126.6.256";
+            ////string pattern = @"([01]?\d?\d|2[0-4]\d|25[0-5]\.){3}([01]?\d?\d|2[0-4]\d|25[0-5])";
+            //string pattern = @"(([01]?\d?\d|2[0-4]\d|25[0-5])\.){3}([01]?\d?\d|2[0-4]\d|25[0-5])";
+            //bool result = Regex.IsMatch(input, pattern);
+            //Match matchas = Regex.Match(input, pattern);
+            //foreach (Match item in Regex.Matches(input, pattern))
+            //{
+            //    string match = item.Value;
+            //}
+            #endregion
 
-                //double ahkd = Math.Pow(2, 32);
+            #region MyRegion
+            //double ahkd = Math.Pow(2, 32);
 
-                //int i = int.MaxValue;
+            //int i = int.MaxValue;
 
-                //decimal dec = 9.1m;
-                //float df = 1.1f;
-                //int da = "9223372036854775807".Length;
+            //decimal dec = 9.1m;
+            //float df = 1.1f;
+            //int da = "9223372036854775807".Length;
 
-                //Car car1 = new Car() { Name = "BMW", Price = 1 };
-                //Car car2 = new Car() { Name = "红旗", Price = 2 };
-                //Car car3 = new Car() { Name = "BMW", Price = 1 };
+            //Car car1 = new Car() { Name = "BMW", Price = 1 };
+            //Car car2 = new Car() { Name = "红旗", Price = 2 };
+            //Car car3 = new Car() { Name = "BMW", Price = 1 };
 
-                //var sum = car1 + car2;
+            //var sum = car1 + car2;
 
-                //double shj = car1;
-                //int daskj = (int)car2;
+            //double shj = car1;
+            //int daskj = (int)car2;
 
-                //bool res1 = car1 == car2;
-                //bool res2 = car1 == car3;
+            //bool res1 = car1 == car2;
+            //bool res2 = car1 == car3;
 
-                //bool res3 = car1 != car2;
-                //bool res4 = car1 != car3;
+            //bool res3 = car1 != car2;
+            //bool res4 = car1 != car3;
 
-                //bool res5 = car1 >= car2;
-                //bool res6 = car2 >= car3;
-                //bool res7 = car1 >= car3;
-            }
+            //bool res5 = car1 >= car2;
+            //bool res6 = car2 >= car3;
+            //bool res7 = car1 >= car3;
+            #endregion
 
             #region xmlTest
             //string xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><note><to>George</to><from>John</from><heading>Reminder</heading><body>Don't forget the meeting!</body></note>";
@@ -186,10 +191,16 @@ namespace Learning
             //}
             #endregion
 
+            Cal();
 
             Console.ReadKey();
         }
-        //PLinq
+        public static async Task Cal()
+        {
+            var sum = await Calculator.AddAsync(2, 3);
+            Console.WriteLine(sum);
+        }
+
         public static void PLinq()
         {
 
