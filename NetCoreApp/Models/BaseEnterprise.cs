@@ -2,5 +2,6 @@
 {
     public class BaseEnterprise
     {
+        public int MyProperty { get; set; }
     }
 }

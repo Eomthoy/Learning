@@ -3,6 +3,11 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <LangVersion>7.1</LangVersion>
+    <!--生成NuGet包设置-->
+    <PackageId>Common</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Eomthoy</Authors>
+    <Company>Personal </Company>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,10 +15,6 @@
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="System.Data.SqlClient" Version="4.5.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\ClassLibraryDemo\ClassLibraryDemo.csproj" />
   </ItemGroup>
 
 </Project>

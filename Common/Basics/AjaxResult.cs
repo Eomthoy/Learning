@@ -4,8 +4,14 @@ namespace Common.Basics
 {
     public class AjaxResult<T>
     {
+        // 摘要：请求是否成功
+        // 结果：true（成功），false（失败）
         public bool? IsSuccess { get; set; }
+        // 摘要：请求返回信息
+        // 结果：
         public string Message { get; set; }
+        // 摘要：请求返回数据
+        // 结果：IEnumerable<T>数据集
         public IEnumerable<T> Data { get; set; }
         public AjaxResult()
         {

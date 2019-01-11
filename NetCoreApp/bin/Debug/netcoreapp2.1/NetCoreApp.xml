@@ -1,0 +1,402 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NetCoreApp</name>
+    </assembly>
+    <members>
+        <member name="T:NetCoreApp.Controllers.AsyncController">
+            <summary>
+            异步测试
+            </summary>
+        </member>
+        <member name="M:NetCoreApp.Controllers.AsyncController.ChangeAsync(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetCoreApp.Controllers.AsyncController.GetTime(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NetCoreApp.Controllers.IOnlineStudyAPI">
+            <summary>
+            用户操作接口
+            </summary>
+        </member>
+        <member name="T:NetCoreApp.Controllers.IUserAPI">
+            <summary>
+            用户操作接口
+            </summary>
+        </member>
+        <member name="M:NetCoreApp.Controllers.ApiBaseController.Succuss(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NetCoreApp.Controllers.ApiBaseController.Erro(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NetCoreApp.Controllers.TestController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:NetCoreApp.Controllers.TestController.ExcelImport">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:NetCoreApp.Controllers.TestController.TestFunc(System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:NetCoreApp.Controllers.Car">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Controllers.Car.Nmae">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Controllers.Car.Price">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:NetCoreApp.Controllers.TspController.GetBaseEnterprisesByType(System.String)">
+            <summary>
+            根据企业类型查询企业列表
+            </summary>
+            <param name="type">企业类型</param>
+            <returns>企业列表</returns>
+        </member>
+        <member name="M:NetCoreApp.Controllers.TspController.GetBaseDistrictsByCode(System.String)">
+            <summary>
+            根据省份编码查询地区列表
+            </summary>
+            <param name="code">地区编码</param>
+            <returns>地区列表</returns>
+        </member>
+        <member name="T:NetCoreApp.Controllers.TspController.TreeNode`1">
+            <summary>
+            树结构
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:NetCoreApp.Controllers.TspController.TreeNode`1.Node">
+            <summary>
+            当前节点
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Controllers.TspController.TreeNode`1.Children">
+            <summary>
+            子节点
+            </summary>
+        </member>
+        <member name="M:NetCoreApp.Controllers.TspController.GetHarvest">
+            <summary>
+            获取种子种苗环节采收总产量
+            </summary>
+            <returns>采收总产量</returns>
+        </member>
+        <member name="M:NetCoreApp.Controllers.TspController.GetEnterpriseNameByBatchNumber(System.String)">
+            <summary>
+            根据产品批号获取饮片生产-销售出库环节的企业名称
+            </summary>
+            <param name="batchNumber">产品批号</param>
+            <returns>企业名称</returns>
+        </member>
+        <member name="M:NetCoreApp.Controllers.TspController.GetPlantFarmerPagedResult(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            根据企业Id获取药材种植环节农户档案分页数据
+            </summary>
+            <param name="enterpriseId">企业Id</param>
+            <param name="pageNumber">页码</param>
+            <param name="pageSize">页大小</param>
+            <returns>农户分页数据</returns>
+        </member>
+        <member name="M:NetCoreApp.Controllers.FileManageController.#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="hostingEnvironment"></param>
+        </member>
+        <member name="M:NetCoreApp.Controllers.FileManageController.UploadFile">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NetCoreApp.Controllers.FileManageController.DownloadFile(System.String)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:NetCoreApp.Controllers.BaseDistrict.IsFReviewed">
+            <summary>
+            是否审核通过
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Controllers.BaseDistrict.Longitude">
+            <summary>
+            经度
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Controllers.BaseDistrict.Latitude">
+            <summary>
+            维度
+            </summary>
+        </member>
+        <member name="T:NetCoreApp.Models.AddAuthTokenHeaderParameter">
+            <summary>
+            添加header参数
+            </summary>
+        </member>
+        <member name="M:NetCoreApp.Models.AddAuthTokenHeaderParameter.Apply(Swashbuckle.AspNetCore.Swagger.Operation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <summary>
+            
+            </summary>
+            <param name="operation"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:NetCoreApp.Models.Class">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.Class.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.Class.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:NetCoreApp.Models.Dhkjdash">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.SysButton.IsFReviewed">
+            <summary>
+            是否审核通过
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.SysButton.MobileClass">
+            <summary>
+            手机样式
+            </summary> 
+        </member>
+        <member name="P:NetCoreApp.Models.SysButton.Sort">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.SearchDto.Role">
+            <summary>
+            角色：1、教师，2、学生
+            </summary>
+        </member>
+        <member name="T:NetCoreApp.Models.StatisticsDto">
+            <summary>
+            统计
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.StatisticsDto.TaskNumber">
+            <summary>
+            作业数
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.StatisticsDto.DiscussNumber">
+            <summary>
+            讨论数
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.StatisticsDto.CommunicationNumber">
+            <summary>
+            师生交流数
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.StatisticsDto.FileNumber">
+            <summary>
+            文件数
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.SysButtonDto.IsFReviewed">
+            <summary>
+            是否审核通过
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.SysButtonDto.MobileClass">
+            <summary>
+            手机样式
+            </summary> 
+        </member>
+        <member name="P:NetCoreApp.Models.SysButtonDto.Sort">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.SysMenuDto.IsFReviewed">
+            <summary>
+            是否审核通过
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.SysMenuDto.Children">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.SysMenuDto.BtnChildren">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.Stu.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.Stu.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.Stu.Gender">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.Stu.ClassId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.Stu.ClassName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:NetCoreApp.Models.Student">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.Student.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.Student.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.Student.Gender">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.Student.ClassId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.Student.Class">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.Student.CreateTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:NetCoreApp.Models.StudentDto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.StudentDto.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.StudentDto.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.StudentDto.Gender">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.StudentDto.ClassId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.StudentDto.Class">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:NetCoreApp.Models.StudentDto.Test">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:NetCoreApp.Repository.NetCoreContext">
+            <summary>
+            仓储上下文
+            </summary>
+        </member>
+        <member name="F:NetCoreApp.Repository.NetCoreContext.ConnectionString">
+            <summary>
+            连接字符串
+            </summary>
+        </member>
+        <member name="M:NetCoreApp.Repository.NetCoreContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            数据库注册
+            </summary>
+            <param name="optionsBuilder"></param>
+        </member>
+        <member name="T:NetCoreApp.Repository.TAggrateRoot">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:NetCoreApp.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:NetCoreApp.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>

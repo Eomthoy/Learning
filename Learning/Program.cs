@@ -15,6 +15,7 @@ using cdutcm.Json;
 using System.Text.RegularExpressions;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using Common.Helper;
 
 namespace Learning
 {

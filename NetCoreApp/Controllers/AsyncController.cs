@@ -45,7 +45,6 @@ namespace NetCoreApp.Controllers
         public JsonResult GetTime(int x)
         {
             Timer timer = new Timer(5000);
-            timer.Elapsed += new ElapsedEventHandler(theout(x));//到达时间的时候执行事件；
             timer.Enabled = true;//是否执行System.Timers.Timer.Elapsed事件；
             return new JsonResult(x);
         }
