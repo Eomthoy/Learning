@@ -192,7 +192,14 @@ namespace Learning
             //}
             #endregion
 
-            Cal();
+            #region MD5
+
+            //string str = EncryptHelper.MD5Encryp("1234", 16);
+            //string str1 = EncryptHelper.MD5Encryp("1234", 32);
+            //Console.WriteLine("16:" + str);
+            //Console.WriteLine("32:" + str1);
+
+            #endregion
 
             Console.ReadKey();
         }
