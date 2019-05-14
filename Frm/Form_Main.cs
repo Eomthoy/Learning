@@ -111,5 +111,11 @@ namespace Frm
         {
             new Form_UpdatePassword().Show();
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ToolStripMenuItem item = sender as ToolStripMenuItem;
+            item.BackColor = Color.DimGray;
+        }
     }
 }
