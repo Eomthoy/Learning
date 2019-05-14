@@ -128,7 +128,8 @@
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(1176, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(36, 24);
+            this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.menuStrip1.Size = new System.Drawing.Size(160, 28);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -139,6 +140,7 @@
             this.menuLogout});
             this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.toolStripMenuItem1.Image = global::Frm.Properties.Resources.择律_选择费用_倒三角形_反对;
+            this.toolStripMenuItem1.Margin = new System.Windows.Forms.Padding(2);
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(28, 20);
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
@@ -148,18 +150,22 @@
             this.menuUpdatePwd.BackColor = System.Drawing.Color.DimGray;
             this.menuUpdatePwd.Font = new System.Drawing.Font("Alibaba Sans Medium", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuUpdatePwd.ForeColor = System.Drawing.Color.White;
+            this.menuUpdatePwd.Image = global::Frm.Properties.Resources.修改密码_;
             this.menuUpdatePwd.Name = "menuUpdatePwd";
             this.menuUpdatePwd.Size = new System.Drawing.Size(180, 26);
             this.menuUpdatePwd.Text = "密码修改";
+            this.menuUpdatePwd.Click += new System.EventHandler(this.menuUpdatePwd_Click);
             // 
             // menuLogout
             // 
             this.menuLogout.BackColor = System.Drawing.Color.DimGray;
             this.menuLogout.Font = new System.Drawing.Font("Alibaba Sans Medium", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuLogout.ForeColor = System.Drawing.Color.White;
+            this.menuLogout.Image = global::Frm.Properties.Resources.注销;
             this.menuLogout.Name = "menuLogout";
             this.menuLogout.Size = new System.Drawing.Size(180, 26);
             this.menuLogout.Text = "注销";
+            this.menuLogout.Click += new System.EventHandler(this.menuLogout_Click);
             // 
             // Form_Main
             // 

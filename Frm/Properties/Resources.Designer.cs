@@ -63,9 +63,29 @@ namespace Frm.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap 修改密码_ {
+            get {
+                object obj = ResourceManager.GetObject("修改密码 ", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap 择律_选择费用_倒三角形_反对 {
             get {
                 object obj = ResourceManager.GetObject("择律-选择费用-倒三角形-反对", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 注销 {
+            get {
+                object obj = ResourceManager.GetObject("注销", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

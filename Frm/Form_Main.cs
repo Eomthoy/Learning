@@ -117,5 +117,15 @@ namespace Frm
             ToolStripMenuItem item = sender as ToolStripMenuItem;
             item.BackColor = Color.DimGray;
         }
+
+        private void menuUpdatePwd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuLogout_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
