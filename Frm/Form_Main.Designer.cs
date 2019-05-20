@@ -38,13 +38,14 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuUpdatePwd = new System.Windows.Forms.ToolStripMenuItem();
             this.menuLogout = new System.Windows.Forms.ToolStripMenuItem();
+            this.菜单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Alibaba Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(1248, 0);
             this.label2.Name = "label2";
@@ -83,9 +84,9 @@
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Alibaba Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(1218, 3);
+            this.label3.Location = new System.Drawing.Point(1218, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(24, 21);
             this.label3.TabIndex = 6;
@@ -96,7 +97,7 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Alibaba Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Location = new System.Drawing.Point(947, 35);
             this.button2.Name = "button2";
@@ -110,7 +111,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Alibaba Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(841, 35);
             this.button1.Name = "button1";
@@ -125,11 +126,12 @@
             this.menuStrip1.BackgroundImage = global::Frm.Properties.Resources.择律_选择费用_倒三角形_反对;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(1176, 0);
+            this.toolStripMenuItem1,
+            this.菜单ToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(512, 27);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.menuStrip1.Size = new System.Drawing.Size(160, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(204, 28);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -148,24 +150,30 @@
             // menuUpdatePwd
             // 
             this.menuUpdatePwd.BackColor = System.Drawing.Color.DimGray;
-            this.menuUpdatePwd.Font = new System.Drawing.Font("Alibaba Sans Medium", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuUpdatePwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuUpdatePwd.ForeColor = System.Drawing.Color.White;
             this.menuUpdatePwd.Image = global::Frm.Properties.Resources.修改密码_;
             this.menuUpdatePwd.Name = "menuUpdatePwd";
-            this.menuUpdatePwd.Size = new System.Drawing.Size(180, 26);
+            this.menuUpdatePwd.Size = new System.Drawing.Size(180, 22);
             this.menuUpdatePwd.Text = "密码修改";
             this.menuUpdatePwd.Click += new System.EventHandler(this.menuUpdatePwd_Click);
             // 
             // menuLogout
             // 
             this.menuLogout.BackColor = System.Drawing.Color.DimGray;
-            this.menuLogout.Font = new System.Drawing.Font("Alibaba Sans Medium", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuLogout.ForeColor = System.Drawing.Color.White;
             this.menuLogout.Image = global::Frm.Properties.Resources.注销;
             this.menuLogout.Name = "menuLogout";
-            this.menuLogout.Size = new System.Drawing.Size(180, 26);
+            this.menuLogout.Size = new System.Drawing.Size(180, 22);
             this.menuLogout.Text = "注销";
             this.menuLogout.Click += new System.EventHandler(this.menuLogout_Click);
+            // 
+            // 菜单ToolStripMenuItem
+            // 
+            this.菜单ToolStripMenuItem.Name = "菜单ToolStripMenuItem";
+            this.菜单ToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
+            this.菜单ToolStripMenuItem.Text = "菜单";
             // 
             // Form_Main
             // 
@@ -199,5 +207,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuUpdatePwd;
         private System.Windows.Forms.ToolStripMenuItem menuLogout;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ToolStripMenuItem 菜单ToolStripMenuItem;
     }
 }

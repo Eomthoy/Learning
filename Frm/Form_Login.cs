@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 
@@ -23,7 +24,7 @@ namespace Frm
         private void MyInit()
         {
             InitFormMove();
-            InitShadow();
+            //InitShadow();
         }
 
         #region 窗体关闭按钮控制方法
@@ -107,6 +108,34 @@ namespace Frm
         {
             new Form_Main().Show();
             this.Close();
+        }
+
+        #region 阴影
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                const int CS_DROPSHADOW = 0x20000;
+                CreateParams cp = base.CreateParams;
+                cp.ClassStyle |= CS_DROPSHADOW;
+                return cp;
+            }
+        }
+
+
+
+        #endregion
+
+        private void Form_Login_Load(object sender, EventArgs e)
+        {
+            menuStrip1.Renderer = new MenuItemRenderer();
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
