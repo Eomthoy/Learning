@@ -36,30 +36,12 @@ namespace Frm
 
         private void label2_MouseHover(object sender, EventArgs e)
         {
-            if (sender is Label)
-            {
-                Label label = sender as Label;
-                label.BackColor = Color.DeepSkyBlue;
-            }
-            else if (sender is Button)
-            {
-                Button btn = sender as Button;
-                btn.BackColor = Color.DeepSkyBlue;
-            }
+
         }
 
         private void label2_MouseLeave(object sender, EventArgs e)
         {
-            if (sender is Label)
-            {
-                Label label = sender as Label;
-                label.BackColor = Color.FromArgb(0, 102, 102);
-            }
-            else if (sender is Button)
-            {
-                Button btn = sender as Button;
-                btn.BackColor = Color.FromArgb(0, 102, 102);
-            }
+
         }
 
         #endregion
@@ -136,6 +118,16 @@ namespace Frm
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label2_MouseEnter(object sender, EventArgs e)
+        {
+            label2.BackColor = Color.Gray;
+        }
+
+        private void label2_MouseLeave_1(object sender, EventArgs e)
+        {
+            label2.BackColor = Color.DimGray;
         }
     }
 }

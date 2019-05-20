@@ -81,25 +81,24 @@ namespace Frm
     class MenuItemRenderer : ToolStripProfessionalRenderer
     {
         //Font textFont = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        private Color menuItemSelectedColor = Color.DimGray;
-        private Color menuItemBorderColor = Color.White;
+        private Color menuItemSelectedColor { get; set; }
+        private Color menuItemBorderColor { get; set; }
         /// <summary> 
         /// Initialize a new instance of the Visual Studio MenuBarRenderer class. 
         /// </summary> 
         public MenuItemRenderer()
         : base(new MenuBarColor())
         {
-            this.menuItemSelectedColor = Color.DeepSkyBlue;
-            this.menuItemBorderColor = Color.Yellow;
+            this.menuItemBorderColor = Color.FromArgb(24, 144, 255);
+            this.menuItemSelectedColor = Color.White;
         }
         protected override void OnRenderItemText(ToolStripItemTextRenderEventArgs e)
         {
-            //e.TextFont = textFont;
             if (e.Item.IsOnDropDown)
             {
                 if (e.Item.Selected)
                 {
-                    e.TextColor = Color.White;
+                    e.TextColor = Color.FromArgb(24, 144, 255);
                 }
                 else
                 {
