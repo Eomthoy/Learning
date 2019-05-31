@@ -201,7 +201,65 @@ namespace Learning
 
             #endregion
 
+            #region 视频通道保存
+
+            //string text = System.IO.File.ReadAllText(@"C:\Users\admin\Desktop\ChannelJson.txt");
+            //List<VideoChannel_8900> list = JsonHelper.JsonToList<Root>(text).Select(x => x.UnitNodes.Channel).ToList();
+            //SqlHelper.connString = @"server=10.10.78.240;database=RecordDB;uid=sa;pwd=123456";
+            //foreach (VideoChannel_8900 model in list)
+            //{
+            //    string sql = $"UPDATE [RecordDB].[dbo].[Pass] SET [VideoChannel_8900] = '{model.id}' WHERE RName = '{model.name}' ";
+            //    SqlHelper.Execute(sql, CommandType.Text);
+            //}
+
+            #endregion
+
+            #region 音频权限
+
+            //int power = 0;
+            //int roomId = 6;
+            //power = GetPower(power, roomId);
+
+            #endregion
+
+            string msg = "aaaaaaaa大萨达\r\n\r\n";
+            string logPath = AppDomain.CurrentDomain.BaseDirectory + "Log\\Application\\";
+            if (!Directory.Exists(logPath))
+            {
+                Directory.CreateDirectory(logPath);
+            }
+            FileStream fs = new FileStream(logPath + DateTime.Today.ToString("yyyyMMdd") + ".txt", FileMode.Append);
+            byte[] bytes = Encoding.Default.GetBytes(msg);
+            fs.Write(bytes, 0, bytes.Length);
+            fs.Flush();
+            fs.Close();
+
             Console.ReadKey();
+        }
+        public static int GetPower(int power, int roomID)
+        {
+            if (roomID <= 15)
+            {
+                if ((power & Convert.ToInt32(Math.Pow(2, roomID))) == 0)
+                {
+                    power += Convert.ToInt32(Math.Pow(2, roomID));
+                }
+            }
+            else if (roomID > 15 && roomID <= 25)
+            {
+                if ((power & Convert.ToInt32(Math.Pow(2, roomID - 15))) == 0)
+                {
+                    power += Convert.ToInt32(Math.Pow(2, roomID - 15));
+                }
+            }
+            else
+            {
+                if ((power & Convert.ToInt32(Math.Pow(2, roomID - 25))) == 0)
+                {
+                    power += Convert.ToInt32(Math.Pow(2, roomID - 25));
+                }
+            }
+            return power;
         }
         public static async Task Cal()
         {
@@ -312,7 +370,7 @@ namespace Learning
         public int? PersonId { get; set; }
     }
 
-    public class Car : Object
+    public class Car
     {
         public string Name { get; set; }
         public int Price { get; set; }
@@ -405,6 +463,16 @@ namespace Learning
         }
         #endregion
 
+        public Car()
+        {
+
+        }
+
+        public Car(string name)
+        {
+            Name = name;
+            Name = "BMW";
+        }
     }
 
 }

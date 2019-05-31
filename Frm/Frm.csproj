@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FormSetHelper.cs" />
+    <Compile Include="Form_Live.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Live.Designer.cs">
+      <DependentUpon>Form_Live.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     <Compile Include="MenuBarColor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_Live.resx">
+      <DependentUpon>Form_Live.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bitbug_favicon.ico" />
+    <None Include="Resources\1.jpg" />
     <None Include="Resources\三角下.png" />
     <None Include="Resources\最小化 %282%29.png" />
     <None Include="Resources\最小化 %281%29.png" />

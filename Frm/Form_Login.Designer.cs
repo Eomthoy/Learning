@@ -93,7 +93,7 @@
             this.menuUpdatePwd.ForeColor = System.Drawing.Color.Black;
             this.menuUpdatePwd.Image = global::Frm.Properties.Resources.修改密码_;
             this.menuUpdatePwd.Name = "menuUpdatePwd";
-            this.menuUpdatePwd.Size = new System.Drawing.Size(180, 22);
+            this.menuUpdatePwd.Size = new System.Drawing.Size(136, 22);
             this.menuUpdatePwd.Text = "密码修改";
             // 
             // menuLogout
@@ -103,7 +103,7 @@
             this.menuLogout.ForeColor = System.Drawing.Color.Black;
             this.menuLogout.Image = global::Frm.Properties.Resources.注销;
             this.menuLogout.Name = "menuLogout";
-            this.menuLogout.Size = new System.Drawing.Size(180, 22);
+            this.menuLogout.Size = new System.Drawing.Size(136, 22);
             this.menuLogout.Text = "注销";
             // 
             // label2

@@ -33,7 +33,7 @@ namespace Common.Helper
                 return EntityToJson(obj);
         }
         /// <summary>
-        /// json格式转换
+        /// 将Json转换为单个对象
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="strJson"></param>
@@ -45,7 +45,7 @@ namespace Common.Helper
             return null;
         }
         /// <summary>
-        /// json格式转换
+        /// 将Json转换为List
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="strJson"></param>
@@ -57,7 +57,7 @@ namespace Common.Helper
             return null;
         }
         /// <summary>
-        /// 功能描述：将List转换为Json
+        /// 将List转换为Json
         /// </summary>
         /// <param name="list"></param>
         /// <returns></returns>

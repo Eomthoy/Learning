@@ -39,6 +39,7 @@
             this.menuUpdatePwd = new System.Windows.Forms.ToolStripMenuItem();
             this.menuLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.菜单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -117,7 +118,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(79, 37);
             this.button1.TabIndex = 3;
-            this.button1.Text = "注 销";
+            this.button1.Text = "全屏";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -131,7 +132,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(512, 27);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.menuStrip1.Size = new System.Drawing.Size(204, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(84, 28);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -154,7 +155,7 @@
             this.menuUpdatePwd.ForeColor = System.Drawing.Color.White;
             this.menuUpdatePwd.Image = global::Frm.Properties.Resources.修改密码_;
             this.menuUpdatePwd.Name = "menuUpdatePwd";
-            this.menuUpdatePwd.Size = new System.Drawing.Size(180, 22);
+            this.menuUpdatePwd.Size = new System.Drawing.Size(136, 22);
             this.menuUpdatePwd.Text = "密码修改";
             this.menuUpdatePwd.Click += new System.EventHandler(this.menuUpdatePwd_Click);
             // 
@@ -165,7 +166,7 @@
             this.menuLogout.ForeColor = System.Drawing.Color.White;
             this.menuLogout.Image = global::Frm.Properties.Resources.注销;
             this.menuLogout.Name = "menuLogout";
-            this.menuLogout.Size = new System.Drawing.Size(180, 22);
+            this.menuLogout.Size = new System.Drawing.Size(136, 22);
             this.menuLogout.Text = "注销";
             this.menuLogout.Click += new System.EventHandler(this.menuLogout_Click);
             // 
@@ -175,18 +176,28 @@
             this.菜单ToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
             this.菜单ToolStripMenuItem.Text = "菜单";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Location = new System.Drawing.Point(128, 125);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1030, 713);
+            this.panel2.TabIndex = 4;
+            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1272, 769);
+            this.ClientSize = new System.Drawing.Size(1272, 892);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Main";
+            this.Load += new System.EventHandler(this.Form_Main_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -208,5 +219,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuLogout;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ToolStripMenuItem 菜单ToolStripMenuItem;
+        private System.Windows.Forms.Panel panel2;
     }
 }

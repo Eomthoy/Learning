@@ -24,7 +24,6 @@ namespace Frm
         private void MyInit()
         {
             InitFormMove();
-            //InitShadow();
         }
 
         #region 窗体关闭按钮控制方法
