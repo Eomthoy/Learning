@@ -66,11 +66,9 @@ namespace CCWin
             }
             else if (r.Height > img.Height && r.Width > img.Width / Totalindex)
             {
-                //top-left
-                //r1 = new Rectangle(x, y, lr.Left, lr.Top);
-                //r2 = new Rectangle(x1, y1, lr.Left, lr.Top);
-                r1 = new Rectangle(0, 0, lr.Left, lr.Top);
-                r2 = new Rectangle(0, 0, lr.Left, lr.Top);
+                //top - left
+                r1 = new Rectangle(x, y, lr.Left, lr.Top);
+                r2 = new Rectangle(x1, y1, lr.Left, lr.Top);
                 g.DrawImage(img, r2, r1, GraphicsUnit.Pixel);
 
                 //top-bottom
@@ -96,10 +94,8 @@ namespace CCWin
                 g.DrawImage(img, r2, r1, GraphicsUnit.Pixel);
 
                 //Right
-                r1 = new Rectangle(x + img.Width / Totalindex - lr.Right, y + lr.Top,
-                    lr.Right, img.Height - lr.Top - lr.Bottom);
-                r2 = new Rectangle(x1 + r.Width - lr.Right, y1 + lr.Top,
-                    lr.Right, r.Height - lr.Top - lr.Bottom);
+                r1 = new Rectangle(x + img.Width / Totalindex - lr.Right, y + lr.Top, lr.Right, img.Height - lr.Top - lr.Bottom);
+                r2 = new Rectangle(x1 + r.Width - lr.Right, y1 + lr.Top, lr.Right, r.Height - lr.Top - lr.Bottom);
                 g.DrawImage(img, r2, r1, GraphicsUnit.Pixel);
 
                 //right-bottom

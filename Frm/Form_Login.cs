@@ -19,7 +19,7 @@ namespace Frm
         {
             InitializeComponent();
 
-            //CreateFloatingPanel(this.originalPanel);
+            CreateFloatingPanel(panel2);
 
             //MyInit();
         }
@@ -31,51 +31,15 @@ namespace Frm
             //InitShadow();
         }
 
-        public void CreateFloatingPanel()
+        public void CreateFloatingPanel(Control control)
         {
             Bitmap bitmap = new Bitmap(panel2.Width, panel2.Height);
-            //Rectangle _BacklightLTRB = new Rectangle(20, 20, 20, 20);//窗体光泽重绘边界
-            Rectangle _BacklightLTRB = new Rectangle(20, 20, 20, 20);//窗体光泽重绘边界
+            Rectangle _BacklightLTRB = new Rectangle(0, 0, 0, 0);//窗体光泽重绘边界
             //Graphics g = Graphics.FromImage(bitmap);
-            Graphics g = panel2.CreateGraphics();
+            Graphics g = control.CreateGraphics();
             g.SmoothingMode = SmoothingMode.HighQuality; //高质量
             g.PixelOffsetMode = PixelOffsetMode.HighQuality; //高像素偏移质量
-            ImageDrawRect.DrawRect(g, Properties.Resources.main_light_bkg_top123, ClientRectangle, Rectangle.FromLTRB(_BacklightLTRB.X, _BacklightLTRB.Y, _BacklightLTRB.Width, _BacklightLTRB.Height), 1, 1);
-
-            //if (!Bitmap.IsCanonicalPixelFormat(bitmap.PixelFormat) || !Bitmap.IsAlphaPixelFormat(bitmap.PixelFormat))
-            //    throw new ApplicationException("图片必须是32位带Alhpa通道的图片。");
-            //IntPtr oldBits = IntPtr.Zero;
-            //IntPtr screenDC = Win32.GetDC(IntPtr.Zero);
-            //IntPtr hBitmap = IntPtr.Zero;
-            //IntPtr memDc = Win32.CreateCompatibleDC(screenDC);
-
-            //try
-            //{
-            //    Win32.Point topLoc = new Win32.Point(Left, Top);
-            //    Win32.Size bitMapSize = new Win32.Size(Width, Height);
-            //    Win32.BLENDFUNCTION blendFunc = new Win32.BLENDFUNCTION();
-            //    Win32.Point srcLoc = new Win32.Point(0, 0);
-
-            //    hBitmap = bitmap.GetHbitmap(Color.FromArgb(0));
-            //    oldBits = Win32.SelectObject(memDc, hBitmap);
-
-            //    blendFunc.BlendOp = Win32.AC_SRC_OVER;
-            //    blendFunc.SourceConstantAlpha = Byte.Parse("255");
-            //    blendFunc.AlphaFormat = Win32.AC_SRC_ALPHA;
-            //    blendFunc.BlendFlags = 0;
-
-            //    Win32.UpdateLayeredWindow(Handle, screenDC, ref topLoc, ref bitMapSize, memDc, ref srcLoc, 0, ref blendFunc, Win32.ULW_ALPHA);
-            //}
-            //finally
-            //{
-            //    if (hBitmap != IntPtr.Zero)
-            //    {
-            //        Win32.SelectObject(memDc, oldBits);
-            //        Win32.DeleteObject(hBitmap);
-            //    }
-            //    Win32.ReleaseDC(IntPtr.Zero, screenDC);
-            //    Win32.DeleteDC(memDc);
-            //}
+            ImageDrawRect.DrawRect(g, Properties.Resources.main_light_bkg_top123, control.ClientRectangle, Rectangle.FromLTRB(_BacklightLTRB.X, _BacklightLTRB.Y, _BacklightLTRB.Width, _BacklightLTRB.Height), 1, 1);
         }
 
         #region 窗体关闭按钮控制方法
@@ -154,7 +118,7 @@ namespace Frm
             //    Panels2.Add(new Panel());
             //}
 
-            CreateFloatingPanel();
+            CreateFloatingPanel(panel2);
         }
 
         #region 阴影
@@ -193,6 +157,17 @@ namespace Frm
         private void label2_MouseLeave_1(object sender, EventArgs e)
         {
             label2.BackColor = Color.DimGray;
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            Bitmap bitmap = new Bitmap(panel2.Width, panel2.Height);
+            Rectangle _BacklightLTRB = new Rectangle(20, 20, 20, 20);//窗体光泽重绘边界
+            //Graphics g = Graphics.FromImage(bitmap);
+            Graphics g = e.Graphics;
+            g.SmoothingMode = SmoothingMode.HighQuality; //高质量
+            g.PixelOffsetMode = PixelOffsetMode.HighQuality; //高像素偏移质量
+            ImageDrawRect.DrawRect(g, Properties.Resources.main_light_bkg_top123, e.ClipRectangle, Rectangle.FromLTRB(_BacklightLTRB.X, _BacklightLTRB.Y, _BacklightLTRB.Width, _BacklightLTRB.Height), 1, 1);
         }
     }
 }

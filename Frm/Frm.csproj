@@ -69,6 +69,12 @@
     <Compile Include="GraphicsPathHelper.cs" />
     <Compile Include="ImageDrawRect.cs" />
     <Compile Include="MenuBarColor.cs" />
+    <Compile Include="PanelExt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelExt.Designer.cs">
+      <DependentUpon>PanelExt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoundStyle.cs" />
@@ -81,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_UpdatePassword.resx">
       <DependentUpon>Form_UpdatePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelExt.resx">
+      <DependentUpon>PanelExt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -45,6 +45,7 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuUpdatePwd = new System.Windows.Forms.ToolStripMenuItem();
             this.menuLogout = new System.Windows.Forms.ToolStripMenuItem();
+            this.panelExt1 = new Frm.PanelExt();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -92,7 +93,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(239, 423);
+            this.button1.Location = new System.Drawing.Point(138, 386);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(289, 54);
             this.button1.TabIndex = 2;
@@ -148,11 +149,11 @@
             // 
             // panel2
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Location = new System.Drawing.Point(578, 216);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 100);
             this.panel2.TabIndex = 6;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // menuStrip1
             // 
@@ -200,12 +201,21 @@
             this.menuLogout.Size = new System.Drawing.Size(136, 22);
             this.menuLogout.Text = "注销";
             // 
+            // panelExt1
+            // 
+            this.panelExt1.Location = new System.Drawing.Point(479, 428);
+            this.panelExt1.Name = "panelExt1";
+            this.panelExt1.Shadow = true;
+            this.panelExt1.Size = new System.Drawing.Size(290, 160);
+            this.panelExt1.TabIndex = 7;
+            // 
             // Form_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(831, 605);
+            this.ClientSize = new System.Drawing.Size(831, 631);
+            this.Controls.Add(this.panelExt1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -243,6 +253,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuLogout;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Panel panel2;
+        private PanelExt panelExt1;
     }
 }
 
