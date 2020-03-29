@@ -28,11 +28,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Common\Common.csproj" />
+    <Folder Include="Controllers\HttpApi\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\HttpApi\" />
+    <ProjectReference Include="..\Common\Eom.Common.csproj" />
   </ItemGroup>
 
 </Project>

@@ -13,8 +13,6 @@ namespace Frm
     public partial class Form_Login : Form
     {
 
-
-
         public Form_Login()
         {
             InitializeComponent();
@@ -24,6 +22,7 @@ namespace Frm
         private void MyInit()
         {
             InitFormMove();
+            checkedListBox1.CheckOnClick = true;
             //InitShadow();
         }
 
@@ -86,10 +85,22 @@ namespace Frm
 
         #endregion
 
+        private List<Panel> Panels { get; set; } = new List<Panel>();
+        private List<Panel> Panels2 { get; set; } = new List<Panel>();
+
         private void button1_Click(object sender, EventArgs e)
         {
-            new Form_Main().Show();
-            this.Close();
+            //new Form_Main().Show();
+            //this.Close();
+            foreach (var item in Panels)
+            {
+
+            }
+            for (int i = 0; i < 100; i++)
+            {
+                Panels.Add(new Panel());
+                Panels2.Add(new Panel());
+            }
         }
 
         #region 阴影

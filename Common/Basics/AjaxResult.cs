@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Common.Basics
+namespace Eom.Common.Basics
 {
     public class AjaxResult<T>
     {

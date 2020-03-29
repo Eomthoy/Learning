@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
-using Common;
+using Eom.Common;
 using System.Data;
 using System.Data.SqlClient;
 using System.Reflection;
@@ -15,13 +15,17 @@ using cdutcm.Json;
 using System.Text.RegularExpressions;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using Common.Helper;
+using Eom.Common.Helpers;
+using Fleck;
+using System.Net.WebSockets;
+using System.Net.Sockets;
+using System.Net;
 
 namespace Learning
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             //PLinq();
 
@@ -201,7 +205,21 @@ namespace Learning
 
             #endregion
 
-            Console.ReadKey();
+            ClientWebSocket socket = new ClientWebSocket();
+            await socket.ConnectAsync(new Uri("ws://192.168.1.107:50000/"), new System.Threading.CancellationToken());
+            byte[] bsend = Encoding.Default.GetBytes("hello");
+            await socket.SendAsync(new ArraySegment<byte>(bsend), WebSocketMessageType.Binary, true, new System.Threading.CancellationToken());
+
+            //Socket socket1 = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
+            //socket1.Connect(new IPEndPoint(IPAddress.Parse("192.168.1.107"), 50000));
+            //byte[] bytes = Encoding.Default.GetBytes("{Id:'1002',Message:'hello world'}");
+            //socket1.Send(bytes);
+
+            //WebSocketServer ws = new WebSocketServer("ws://192.168.1.107:50000");
+            //ws.Start(socket =>
+            //{
+            //    socket.Send("hello");
+            //});
         }
         public static async Task Cal()
         {

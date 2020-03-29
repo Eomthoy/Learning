@@ -1,0 +1,15 @@
+C:\work\Staty\ApplyKnowledge\sokect通讯管理工具\WebSocketService\WinFormWebsocket\bin\Release\WinFormWebsocket.exe.config
+C:\work\Staty\ApplyKnowledge\sokect通讯管理工具\WebSocketService\WinFormWebsocket\bin\Release\WinFormWebsocket.exe
+C:\work\Staty\ApplyKnowledge\sokect通讯管理工具\WebSocketService\WinFormWebsocket\bin\Release\WinFormWebsocket.pdb
+C:\work\Staty\ApplyKnowledge\sokect通讯管理工具\WebSocketService\WinFormWebsocket\bin\Release\NLog.dll
+C:\work\Staty\ApplyKnowledge\sokect通讯管理工具\WebSocketService\WinFormWebsocket\bin\Release\SuperSocket.ClientEngine.dll
+C:\work\Staty\ApplyKnowledge\sokect通讯管理工具\WebSocketService\WinFormWebsocket\bin\Release\WebSocket4Net.dll
+C:\work\Staty\ApplyKnowledge\sokect通讯管理工具\WebSocketService\WinFormWebsocket\bin\Release\NLog.xml
+C:\work\Staty\ApplyKnowledge\sokect通讯管理工具\WebSocketService\WinFormWebsocket\obj\Release\WinFormWebsocket.csprojAssemblyReference.cache
+C:\work\Staty\ApplyKnowledge\sokect通讯管理工具\WebSocketService\WinFormWebsocket\obj\Release\WinFormWebsocket.Form1.resources
+C:\work\Staty\ApplyKnowledge\sokect通讯管理工具\WebSocketService\WinFormWebsocket\obj\Release\WinFormWebsocket.Properties.Resources.resources
+C:\work\Staty\ApplyKnowledge\sokect通讯管理工具\WebSocketService\WinFormWebsocket\obj\Release\WinFormWebsocket.csproj.GenerateResource.cache
+C:\work\Staty\ApplyKnowledge\sokect通讯管理工具\WebSocketService\WinFormWebsocket\obj\Release\WinFormWebsocket.csproj.CoreCompileInputs.cache
+C:\work\Staty\ApplyKnowledge\sokect通讯管理工具\WebSocketService\WinFormWebsocket\obj\Release\WinFormWebsocket.csproj.CopyComplete
+C:\work\Staty\ApplyKnowledge\sokect通讯管理工具\WebSocketService\WinFormWebsocket\obj\Release\WinFormWebsocket.exe
+C:\work\Staty\ApplyKnowledge\sokect通讯管理工具\WebSocketService\WinFormWebsocket\obj\Release\WinFormWebsocket.pdb

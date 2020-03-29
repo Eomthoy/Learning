@@ -45,6 +45,8 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.label5 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -93,7 +95,7 @@
             this.menuUpdatePwd.ForeColor = System.Drawing.Color.Black;
             this.menuUpdatePwd.Image = global::Frm.Properties.Resources.修改密码_;
             this.menuUpdatePwd.Name = "menuUpdatePwd";
-            this.menuUpdatePwd.Size = new System.Drawing.Size(180, 22);
+            this.menuUpdatePwd.Size = new System.Drawing.Size(136, 22);
             this.menuUpdatePwd.Text = "密码修改";
             // 
             // menuLogout
@@ -103,7 +105,7 @@
             this.menuLogout.ForeColor = System.Drawing.Color.Black;
             this.menuLogout.Image = global::Frm.Properties.Resources.注销;
             this.menuLogout.Name = "menuLogout";
-            this.menuLogout.Size = new System.Drawing.Size(180, 22);
+            this.menuLogout.Size = new System.Drawing.Size(136, 22);
             this.menuLogout.Text = "注销";
             // 
             // label2
@@ -201,12 +203,61 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "label5";
             // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.CheckOnClick = true;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "L",
+            "M",
+            "N",
+            "O",
+            "P",
+            "Q"});
+            this.checkedListBox1.Location = new System.Drawing.Point(594, 200);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(200, 132);
+            this.checkedListBox1.TabIndex = 0;
+            // 
+            // checkedListBox2
+            // 
+            this.checkedListBox2.CheckOnClick = true;
+            this.checkedListBox2.FormattingEnabled = true;
+            this.checkedListBox2.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J"});
+            this.checkedListBox2.Location = new System.Drawing.Point(594, 363);
+            this.checkedListBox2.Name = "checkedListBox2";
+            this.checkedListBox2.Size = new System.Drawing.Size(200, 180);
+            this.checkedListBox2.TabIndex = 1;
+            // 
             // Form_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(831, 605);
+            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.checkedListBox2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -244,6 +295,8 @@
         private System.Windows.Forms.ToolStripMenuItem menuUpdatePwd;
         private System.Windows.Forms.ToolStripMenuItem menuLogout;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox checkedListBox2;
     }
 }
 

@@ -1,9 +1,9 @@
 ﻿using System.IO;
 using System.Threading.Tasks;
-using Common.Basics;
+using Eom.Common.Basics;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using Common.Helper;
+using Eom.Common.Helpers;
 using System.Collections.Generic;
 using System.Linq;
 using System;
