@@ -73,6 +73,16 @@ namespace Frm.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap quiteFullScreen {
+            get {
+                object obj = ResourceManager.GetObject("quiteFullScreen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap 三角下 {
             get {
                 object obj = ResourceManager.GetObject("三角下", resourceCulture);

@@ -109,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bitbug_favicon.ico" />
+    <None Include="Resources\quiteFullScreen.png" />
     <None Include="Resources\1.jpg" />
     <None Include="Resources\三角下.png" />
     <None Include="Resources\最小化 %282%29.png" />

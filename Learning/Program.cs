@@ -16,11 +16,18 @@ using System.Text.RegularExpressions;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using Common.Helper;
+using MonitorManageClient.Models;
+using System.Timers;
+using model;
+using Newtonsoft.Json;
+using OffService.Helper;
 
 namespace Learning
 {
     class Program
     {
+
+        public static Timer timer;
         static void Main(string[] args)
         {
             //PLinq();
@@ -203,13 +210,15 @@ namespace Learning
 
             #region 视频通道保存
 
-            //string text = System.IO.File.ReadAllText(@"C:\Users\admin\Desktop\ChannelJson.txt");
-            //List<VideoChannel_8900> list = JsonHelper.JsonToList<Root>(text).Select(x => x.UnitNodes.Channel).ToList();
+            //string text = System.IO.File.ReadAllText(@"C:\Users\admin\Desktop\111.txt", Encoding.UTF8);
             //SqlHelper.connString = @"server=10.10.78.240;database=RecordDB;uid=sa;pwd=123456";
-            //foreach (VideoChannel_8900 model in list)
+            //foreach (var item in JsonHelper.JsonToList<Root>(text).Select(x => x.UnitNodes.Channel))
             //{
-            //    string sql = $"UPDATE [RecordDB].[dbo].[Pass] SET [VideoChannel_8900] = '{model.id}' WHERE RName = '{model.name}' ";
-            //    SqlHelper.Execute(sql, CommandType.Text);
+            //    foreach (Channel model in item)
+            //    {
+            //        string sql = $"UPDATE [RecordDB].[dbo].[Pass] SET [VideoChannelB] = '{model.id}' WHERE RName = '{model.name}' ";
+            //        SqlHelper.Execute(sql, CommandType.Text);
+            //    }
             //}
 
             #endregion
@@ -222,20 +231,15 @@ namespace Learning
 
             #endregion
 
-            string msg = "aaaaaaaa大萨达\r\n\r\n";
-            string logPath = AppDomain.CurrentDomain.BaseDirectory + "Log\\Application\\";
-            if (!Directory.Exists(logPath))
-            {
-                Directory.CreateDirectory(logPath);
-            }
-            FileStream fs = new FileStream(logPath + DateTime.Today.ToString("yyyyMMdd") + ".txt", FileMode.Append);
-            byte[] bytes = Encoding.Default.GetBytes(msg);
-            fs.Write(bytes, 0, bytes.Length);
-            fs.Flush();
-            fs.Close();
-
             Console.ReadKey();
         }
+
+        private static void Save(object sender, ElapsedEventArgs e)
+        {
+            Console.WriteLine(timer.Interval);
+            timer.Interval = 6000;
+        }
+
         public static int GetPower(int power, int roomID)
         {
             if (roomID <= 15)
@@ -266,7 +270,6 @@ namespace Learning
             var sum = await Calculator.AddAsync(2, 3);
             Console.WriteLine(sum);
         }
-
         public static void PLinq()
         {
 

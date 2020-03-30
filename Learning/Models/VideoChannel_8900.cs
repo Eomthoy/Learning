@@ -1,17 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
-namespace Learning.Models
+namespace MonitorManageClient.Models
 {
-    public class VideoChannel_8900
+    public class Channel
     {
         /// <summary>
-        /// 通道号
+        /// 
         /// </summary>
         public string id { get; set; }
         /// <summary>
-        /// 房间名
+        /// 二号谈话间3
         /// </summary>
         public string name { get; set; }
         /// <summary>
@@ -81,7 +79,7 @@ namespace Learning.Models
         /// <summary>
         /// 
         /// </summary>
-        public VideoChannel_8900 Channel { get; set; }
+        public List<Channel> Channel { get; set; }
     }
 
     public class Root
@@ -95,7 +93,7 @@ namespace Learning.Models
         /// </summary>
         public string type { get; set; }
         /// <summary>
-        /// 十五号谈话间3
+        /// 二号谈话间3
         /// </summary>
         public string name { get; set; }
         /// <summary>

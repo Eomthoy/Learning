@@ -14,6 +14,9 @@ namespace Frm
         public Form_Live()
         {
             InitializeComponent();
+
+            this.panel2.Controls.Add(new PictureBox() { Location = new Point(0, 0), Size = this.panel2.Size });
+            //this.panel1.BringToFront();
         }
 
         public void FullScreen()
@@ -24,10 +27,11 @@ namespace Frm
             int Width = this.panel2.Width / 4;
             int Height = this.panel2.Height / 4;
             panel2.BringToFront();
+        }
 
-            pictureBox1.Width = Width;
-            pictureBox1.Height = Height;
-            pictureBox1.Location = new Point(0, 0);
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            FullScreen();
         }
     }
 }
