@@ -1,8 +1,10 @@
-﻿using System;
+﻿using CCWin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -13,17 +15,31 @@ namespace Frm
     public partial class Form_Login : Form
     {
 
-
-
         public Form_Login()
         {
             InitializeComponent();
-            MyInit();
+
+            CreateFloatingPanel(panel2);
+
+            //MyInit();
         }
 
         private void MyInit()
         {
-            InitFormMove();
+            //InitFormMove();
+
+            //InitShadow();
+        }
+
+        public void CreateFloatingPanel(Control control)
+        {
+            Bitmap bitmap = new Bitmap(panel2.Width, panel2.Height);
+            Rectangle _BacklightLTRB = new Rectangle(0, 0, 0, 0);//窗体光泽重绘边界
+            //Graphics g = Graphics.FromImage(bitmap);
+            Graphics g = control.CreateGraphics();
+            g.SmoothingMode = SmoothingMode.HighQuality; //高质量
+            g.PixelOffsetMode = PixelOffsetMode.HighQuality; //高像素偏移质量
+            ImageDrawRect.DrawRect(g, Properties.Resources.main_light_bkg_top123, control.ClientRectangle, Rectangle.FromLTRB(_BacklightLTRB.X, _BacklightLTRB.Y, _BacklightLTRB.Width, _BacklightLTRB.Height), 1, 1);
         }
 
         #region 窗体关闭按钮控制方法
@@ -85,10 +101,24 @@ namespace Frm
 
         #endregion
 
+        private List<Panel> Panels { get; set; } = new List<Panel>();
+        private List<Panel> Panels2 { get; set; } = new List<Panel>();
+
         private void button1_Click(object sender, EventArgs e)
         {
-            new Form_Main().Show();
-            this.Close();
+            //new Form_Main().Show();
+            //this.Close();
+            //foreach (var item in Panels)
+            //{
+
+            //}
+            //for (int i = 0; i < 100; i++)
+            //{
+            //    Panels.Add(new Panel());
+            //    Panels2.Add(new Panel());
+            //}
+
+            CreateFloatingPanel(panel2);
         }
 
         #region 阴影
@@ -127,6 +157,17 @@ namespace Frm
         private void label2_MouseLeave_1(object sender, EventArgs e)
         {
             label2.BackColor = Color.DimGray;
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            Bitmap bitmap = new Bitmap(panel2.Width, panel2.Height);
+            Rectangle _BacklightLTRB = new Rectangle(20, 20, 20, 20);//窗体光泽重绘边界
+            //Graphics g = Graphics.FromImage(bitmap);
+            Graphics g = e.Graphics;
+            g.SmoothingMode = SmoothingMode.HighQuality; //高质量
+            g.PixelOffsetMode = PixelOffsetMode.HighQuality; //高像素偏移质量
+            ImageDrawRect.DrawRect(g, Properties.Resources.main_light_bkg_top123, e.ClipRectangle, Rectangle.FromLTRB(_BacklightLTRB.X, _BacklightLTRB.Y, _BacklightLTRB.Width, _BacklightLTRB.Height), 1, 1);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Common.Basics;
+﻿using Eom.Common.Basics;
 using NetCoreApp.Models;
 using System;
 using System.Collections.Generic;

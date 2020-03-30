@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Common.Basics
+namespace Eom.Common.Basics
 {
     /// <summary>
     /// 数据分页

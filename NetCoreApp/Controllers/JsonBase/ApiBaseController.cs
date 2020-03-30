@@ -1,4 +1,4 @@
-﻿using Common.Basics;
+﻿using Eom.Common.Basics;
 using Microsoft.AspNetCore.Mvc;
 
 namespace NetCoreApp.Controllers

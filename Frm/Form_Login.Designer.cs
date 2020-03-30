@@ -31,10 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Login));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuUpdatePwd = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -43,8 +39,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.label5 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuUpdatePwd = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuLogout = new System.Windows.Forms.ToolStripMenuItem();
+            this.panelExt1 = new Frm.PanelExt();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -59,52 +60,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(831, 100);
             this.panel1.TabIndex = 1;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackgroundImage = global::Frm.Properties.Resources.择律_选择费用_倒三角形_反对;
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(754, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.menuStrip1.Size = new System.Drawing.Size(40, 28);
-            this.menuStrip1.TabIndex = 64;
-            this.menuStrip1.Text = "menuStrip1";
-            this.toolTip1.SetToolTip(this.menuStrip1, "菜单");
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuUpdatePwd,
-            this.menuLogout});
-            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem1.Image = global::Frm.Properties.Resources.择律_选择费用_倒三角形_反对;
-            this.toolStripMenuItem1.Margin = new System.Windows.Forms.Padding(2);
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(28, 20);
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
-            // menuUpdatePwd
-            // 
-            this.menuUpdatePwd.BackColor = System.Drawing.Color.White;
-            this.menuUpdatePwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuUpdatePwd.ForeColor = System.Drawing.Color.Black;
-            this.menuUpdatePwd.Image = global::Frm.Properties.Resources.修改密码_;
-            this.menuUpdatePwd.Name = "menuUpdatePwd";
-            this.menuUpdatePwd.Size = new System.Drawing.Size(136, 22);
-            this.menuUpdatePwd.Text = "密码修改";
-            // 
-            // menuLogout
-            // 
-            this.menuLogout.BackColor = System.Drawing.Color.White;
-            this.menuLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuLogout.ForeColor = System.Drawing.Color.Black;
-            this.menuLogout.Image = global::Frm.Properties.Resources.注销;
-            this.menuLogout.Name = "menuLogout";
-            this.menuLogout.Size = new System.Drawing.Size(136, 22);
-            this.menuLogout.Text = "注销";
             // 
             // label2
             // 
@@ -138,7 +93,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(239, 423);
+            this.button1.Location = new System.Drawing.Point(138, 386);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(289, 54);
             this.button1.TabIndex = 2;
@@ -192,22 +147,76 @@
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
-            // label5
+            // panel2
             // 
-            this.label5.BackColor = System.Drawing.Color.DarkGray;
-            this.label5.Location = new System.Drawing.Point(0, 604);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(831, 1);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "label5";
+            this.panel2.Location = new System.Drawing.Point(578, 216);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 100);
+            this.panel2.TabIndex = 6;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackgroundImage = global::Frm.Properties.Resources.择律_选择费用_倒三角形_反对;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(754, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.menuStrip1.Size = new System.Drawing.Size(40, 28);
+            this.menuStrip1.TabIndex = 64;
+            this.menuStrip1.Text = "menuStrip1";
+            this.toolTip1.SetToolTip(this.menuStrip1, "菜单");
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuUpdatePwd,
+            this.menuLogout});
+            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem1.Image = global::Frm.Properties.Resources.择律_选择费用_倒三角形_反对;
+            this.toolStripMenuItem1.Margin = new System.Windows.Forms.Padding(2);
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(28, 20);
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // menuUpdatePwd
+            // 
+            this.menuUpdatePwd.BackColor = System.Drawing.Color.White;
+            this.menuUpdatePwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuUpdatePwd.ForeColor = System.Drawing.Color.Black;
+            this.menuUpdatePwd.Image = global::Frm.Properties.Resources.修改密码_;
+            this.menuUpdatePwd.Name = "menuUpdatePwd";
+            this.menuUpdatePwd.Size = new System.Drawing.Size(136, 22);
+            this.menuUpdatePwd.Text = "密码修改";
+            // 
+            // menuLogout
+            // 
+            this.menuLogout.BackColor = System.Drawing.Color.White;
+            this.menuLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuLogout.ForeColor = System.Drawing.Color.Black;
+            this.menuLogout.Image = global::Frm.Properties.Resources.注销;
+            this.menuLogout.Name = "menuLogout";
+            this.menuLogout.Size = new System.Drawing.Size(136, 22);
+            this.menuLogout.Text = "注销";
+            // 
+            // panelExt1
+            // 
+            this.panelExt1.Location = new System.Drawing.Point(479, 428);
+            this.panelExt1.Name = "panelExt1";
+            this.panelExt1.Shadow = true;
+            this.panelExt1.Size = new System.Drawing.Size(290, 160);
+            this.panelExt1.TabIndex = 7;
             // 
             // Form_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(831, 605);
-            this.Controls.Add(this.label5);
+            this.ClientSize = new System.Drawing.Size(831, 631);
+            this.Controls.Add(this.panelExt1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox2);
@@ -238,12 +247,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem menuUpdatePwd;
         private System.Windows.Forms.ToolStripMenuItem menuLogout;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Panel panel2;
+        private PanelExt panelExt1;
     }
 }
 
