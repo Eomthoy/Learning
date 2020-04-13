@@ -19,8 +19,6 @@ namespace Frm
         {
             InitializeComponent();
 
-            CreateFloatingPanel(panel2);
-
             //MyInit();
         }
 

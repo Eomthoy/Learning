@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
-using Common;
+using Eom.Common;
 using System.Data;
 using System.Data.SqlClient;
 using System.Reflection;
@@ -15,7 +15,7 @@ using cdutcm.Json;
 using System.Text.RegularExpressions;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using Common.Helper;
+using Eom.Common.Helpers;
 using MonitorManageClient.Models;
 using System.Timers;
 using model;
@@ -210,16 +210,16 @@ namespace Learning
 
             #region 视频通道保存
 
-            //string text = System.IO.File.ReadAllText(@"C:\Users\admin\Desktop\111.txt", Encoding.UTF8);
-            //SqlHelper.connString = @"server=10.10.78.240;database=RecordDB;uid=sa;pwd=123456";
-            //foreach (var item in JsonHelper.JsonToList<Root>(text).Select(x => x.UnitNodes.Channel))
-            //{
-            //    foreach (Channel model in item)
-            //    {
-            //        string sql = $"UPDATE [RecordDB].[dbo].[Pass] SET [VideoChannelB] = '{model.id}' WHERE RName = '{model.name}' ";
-            //        SqlHelper.Execute(sql, CommandType.Text);
-            //    }
-            //}
+            string text = System.IO.File.ReadAllText(@"C:\Users\admin\Desktop\111.txt", Encoding.UTF8);
+            SqlHelper.connString = @"server=10.10.78.240;database=RecordDB;uid=sa;pwd=123456";
+            foreach (var item in JsonHelper.JsonToList<Root>(text).Select(x => x.UnitNodes.Channel))
+            {
+                foreach (Channel model in item)
+                {
+                    string sql = $"UPDATE [RecordDB].[dbo].[Pass] SET [VideoChannelB] = '{model.id}' WHERE RName = '{model.name}' ";
+                    SqlHelper.Execute(sql, CommandType.Text);
+                }
+            }
 
             #endregion
 
